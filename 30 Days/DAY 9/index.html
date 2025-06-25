@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Icon -->
+    <link
+      href="https://cdn.boxicons.com/fonts/basic/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="weather-wrapper">
+      <!-- Search -->
+      <input type="text" class="search" />
+      <div class="content">
+        <!-- Location -->
+        <div class="location">
+          <span class="city"></span>
+          <span>-</span>
+          <span class="country"></span>
+        </div>
+
+        <!-- Time -->
+        <div class="time">dd/mm/yyyy, h:mm pm</div>
+
+        <!-- Temperature -->
+        <div class="temperature">
+          <span class="temperature-value"></span><sup>o</sup><span>C</span>
+        </div>
+
+        <!-- Short Description -->
+        <div class="short-desc">Clouds</div>
+
+        <!-- More detail -->
+        <div class="more-detail">
+          <!-- Visibility -->
+          <div class="visibility">
+            <i class="bxr bx-eye"></i>
+            <span>m</span>
+          </div>
+
+          <!-- Wind -->
+          <div class="wind">
+            <i class="bxr bx-wind"></i>
+            <span>m/s</span>
+          </div>
+
+          <!-- Humidity -->
+          <div class="humidity">
+            <i class="bxr bx-cloud-sun"></i>
+            <span>%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
