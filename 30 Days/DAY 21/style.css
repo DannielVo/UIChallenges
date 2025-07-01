@@ -5,6 +5,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Poppins";
+  transition: 0.5s;
 }
 
 :root {
@@ -13,11 +14,23 @@
   --background-box: #dadada;
   --background-switch: #a0a0a0;
   --color-box: #3b3b3b;
+  --secondary-color: #3a9041;
+  --secondary-background: #282828;
+  --secondary-box: #2d2d2d;
+  --text-main: #333;
 }
 
 body {
   height: 100vh;
   background: var(--background-color);
+}
+
+body.dark {
+  --primary-color: #3a9041;
+  --background-color: #282828;
+  --background-box: #303030;
+  --color-box: #eee;
+  --text-main: #fff;
 }
 
 .container {
@@ -74,6 +87,7 @@ h1 {
 .box p {
   font-size: 22px;
   margin-bottom: 30px;
+  color: var(--text-main);
 }
 
 .list-btn {
@@ -88,4 +102,5 @@ h1 {
   padding: 15px 35px;
   border-radius: 10px;
   font-size: 20px;
+  border: none;
 }
