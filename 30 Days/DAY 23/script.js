@@ -1,22 +1,26 @@
-// var result = document.querySelector("#result");
-
-// document.addEventListener("mousemove", function (e) {
-//   result.style.top = `${e.clientY}px`;
-//   result.style.left = `${e.clientX}px`;
-// });
-
-var img = document.querySelector("img");
+var imgList = document.querySelectorAll(".box img");
 var mirror = document.querySelector("#mirror");
 
-img.addEventListener("mousemove", function (e) {
-  let width = this.offsetWidth;
-  let height = this.offsetHeight;
+mirror.classList.add("hide");
 
-  let mouseWithImgBorderX = e.pageX - this.offsetLeft;
-  let mouseWithImgBorderY = e.pageY - this.offsetTop;
+imgList.forEach(function (img) {
+  img.addEventListener("mousemove", function (e) {
+    mirror.classList.remove("hide");
 
-  let percentMouseByX = (mouseWithImgBorderX / width) * 100;
-  let percentMouseByY = (mouseWithImgBorderY / height) * 100;
+    // Tính phần trăm vị trí chuột trong ảnh
+    let mousePercentByWidth = (e.offsetX / this.offsetWidth) * 100;
+    let mousePercentByHeight = (e.offsetY / this.offsetHeight) * 100;
+    mirror.style.top = `${e.clientY}px`;
+    mirror.style.left = `${e.clientX}px`;
 
-  mirror.style.backgroundPosition = `${percentMouseByX}% ${percentMouseByY}%`;
+    mirror.style.backgroundSize = `1000px 1000px`;
+    mirror.style.backgroundPosition = `${mousePercentByWidth}% ${mousePercentByHeight}%`;
+
+    let imgSource = e.target.getAttribute("src");
+    mirror.style.backgroundImage = `url(${imgSource})`;
+  });
+
+  img.addEventListener("mouseleave", function () {
+    mirror.classList.add("hide");
+  });
 });
