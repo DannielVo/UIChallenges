@@ -6,3 +6,59 @@
   box-sizing: border-box;
   font-family: "Poppins";
 }
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.player {
+  width: 800px;
+  position: relative;
+  overflow: hidden;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+}
+
+.control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  color: white;
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), transparent);
+  transform: translateY(100%);
+  transition: 0.3s;
+}
+
+.player:hover .control {
+  transform: unset;
+}
+
+.control > * {
+  margin: 0 2px;
+  cursor: pointer;
+}
+
+.control .progress {
+  background: white;
+  height: 5px;
+  position: relative;
+  flex: 1;
+}
+
+.control .progress-filled {
+  background: red;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+}
