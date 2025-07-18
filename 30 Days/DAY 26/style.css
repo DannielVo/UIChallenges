@@ -6,3 +6,59 @@
   box-sizing: border-box;
   font-family: "Poppins";
 }
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(140deg, #4c886a, #d7eae1 90%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.form-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  padding: 0 10px;
+  margin-right: 10px;
+  border-radius: 8px;
+}
+
+.form-input input {
+  border: none;
+  outline: none;
+  padding: 8px;
+  font-size: 16px;
+}
+
+.submit-btn {
+  background: #4c886a;
+  border-radius: 8px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  color: white;
+  font-weight: bold;
+}
+
+.validator {
+  background: #3f6755;
+  padding: 8px 15px;
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+
+.validator p.valid {
+  color: #ccc;
+}
