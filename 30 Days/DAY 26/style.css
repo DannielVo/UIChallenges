@@ -49,6 +49,12 @@ body {
   outline: none;
   color: white;
   font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background: #3f6755;
 }
 
 .validator {
@@ -59,6 +65,13 @@ body {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
 }
 
-.validator p.valid {
+.validator-group {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+}
+
+.valid {
   color: #ccc;
 }
