@@ -30,46 +30,46 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: white;
-  font-size: 30px;
+  background-color: white;
   border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  transition: 0.3s;
+  font-size: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
   position: relative;
+  cursor: pointer;
+  transition: 0.5s;
   margin: 0 20px;
 }
 
 .tooltip {
   position: absolute;
-  padding: 0 30px;
   /* background: var(--facebook-color); */
+  padding: 0 30px;
+  border-radius: 25px;
   color: white;
   height: 45px;
   line-height: 45px;
-  border-radius: 25px;
   font-size: 23px;
-  opacity: 0;
   top: 0;
-  transition: all 0.5s;
+  transition: 0.5s;
+  opacity: 0;
   pointer-events: none;
 }
 
 .tooltip::before {
   content: "";
-  /* background: var(--facebook-color); */
-  display: block;
   position: absolute;
-  width: 13px;
-  height: 13px;
+  display: block;
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 50%) rotate(45deg);
+  /* background-color: var(--facebook-color); */
+  width: 13px;
+  height: 13px;
 }
 
 .icon:hover {
-  background-color: var(--facebook-color);
   color: white;
+  /* background-color: var(--facebook-color); */
 }
 
 .icon:hover .tooltip {
