@@ -6,3 +6,94 @@
   box-sizing: border-box;
   font-family: "Poppins";
 }
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #a4ddf6;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 700px;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  padding: 15px;
+  border-radius: 8px;
+  background: white;
+}
+
+.card-img {
+  width: 250px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+
+.card-info {
+  flex: 1;
+}
+
+.card-info h2 {
+  font-size: 25px;
+  margin-bottom: 15px;
+  width: 100%;
+  height: 40px;
+  border-radius: 8px;
+}
+
+.card-info p {
+  margin-bottom: 25px;
+  color: #0b0a0a;
+  height: 100px;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.card-info button {
+  height: 40px;
+  width: 80px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: none;
+  /* background: #0b0a0a; */
+  color: white;
+  font-size: 15px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+/* .card-info button:hover {
+  transform: scale(0.9);
+} */
+
+.loading {
+  background-color: #b0b0b0;
+  position: relative;
+  overflow: hidden;
+}
+
+.loading::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, #d5d5d5, transparent);
+  animation: loading-wave linear 1s infinite;
+}
+
+@keyframes loading-wave {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
