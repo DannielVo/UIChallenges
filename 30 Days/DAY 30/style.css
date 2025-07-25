@@ -27,6 +27,10 @@ body {
   user-select: none;
 }
 
+.wrapper::-webkit-scrollbar {
+  width: 0;
+}
+
 .box {
   display: inline-flex;
   justify-content: center;
