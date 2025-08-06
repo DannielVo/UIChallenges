@@ -1,1 +1,80 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(to left, #367896, #50b9da);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.number {
+  display: flex;
+}
+
+.one-1 {
+  width: 24px;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 5px;
+  transform: translateX(15px);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  z-index: 6;
+}
+
+.one-stroke {
+  position: absolute;
+  width: 24px;
+  height: 45px;
+  background-color: #fff;
+  transform: rotate(45deg);
+  border-radius: 4px;
+}
+
+.zero {
+  width: 100px;
+  height: 100px;
+  border: 24px solid #fff;
+  border-radius: 50%;
+}
+
+.zero-1 {
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  transform: translateX(5px);
+  z-index: 4;
+}
+
+.zero-2 {
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
+  transform: translateX(-12px);
+}
+
+.text-big {
+  font-size: 5.3rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: -10px;
+}
+
+.text-small {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: -15px;
+}
