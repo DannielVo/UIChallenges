@@ -26,6 +26,8 @@
 
 .number {
   display: flex;
+  transition: 0.3s ease-in-out;
+  animation: loadingNumber 1s;
 }
 
 .one-1 {
@@ -70,6 +72,8 @@
   text-transform: uppercase;
   font-weight: bold;
   margin-top: -10px;
+  transition: 0.3s ease-in-out;
+  animation: loadingTextBig 1.2s;
 }
 
 .text-small {
@@ -77,4 +81,35 @@
   text-transform: uppercase;
   font-weight: bold;
   margin-top: -15px;
+  animation: loadingTextSmall 1s;
+}
+
+@keyframes loadingNumber {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes loadingTextBig {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes loadingTextSmall {
+  0% {
+    transform: translateY(200%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
 }
