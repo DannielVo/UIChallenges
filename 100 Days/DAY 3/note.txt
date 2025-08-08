@@ -1,0 +1,28 @@
+1. transform-origin
+- là mắt xích / trục quay / điểm neo cho các phép biến đổi (transform): quay (rotate), phóng to/thu nhỏ (scale), nghiêng (skew)... 
+- Mặc định là center center (trung tâm phần tử).
+
+/* thường là: <x> <y> [<z>] */
+transform-origin: 50% 50%;      /* trung tâm */
+transform-origin: left top;     /* góc trên trái */
+transform-origin: 20px 10px;    /* toạ độ tuyệt đối tính từ góc trên trái */
+transform-origin: 50% 100%;     /* giữa dưới */
+
+
+2. animation-timing-function: cubic-bezier(x1, y1, x2, y2)
+- xác định độ nhanh/chậm theo thời gian của animation
+
+Một vài easing thông dụng (tương đương):
+
+linear → cubic-bezier(0, 0, 1, 1) (tốc độ không đổi)
+
+ease → cubic-bezier(0.25, 0.1, 0.25, 1) (mặc định CSS)
+
+ease-in → cubic-bezier(0.42, 0, 1, 1) (chậm rồi tăng tốc)
+
+ease-out → cubic-bezier(0, 0, 0.58, 1) (bắt đầu nhanh rồi chậm dần)
+
+ease-in-out → cubic-bezier(0.42, 0, 0.58, 1) (chậm → nhanh → chậm)
+
+
+3. 
