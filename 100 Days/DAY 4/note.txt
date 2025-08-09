@@ -1,0 +1,37 @@
+1. animation-direction
+
+- normal: animation chạy từ 0% → 100% rồi quay lại 0% và lặp lại.
+
+- alternate: animation sẽ đảo chiều mỗi lần lặp:
+
+Lượt 1: chạy từ 0% → 100%
+
+Lượt 2: chạy từ 100% → 0%
+
+Lượt 3: lại từ 0% → 100%, và cứ thế tiếp tục...
+
+Lợi ích: giúp chuyển động mượt và liên tục, không bị “giật” khi animation quay lại trạng thái ban đầu.
+
+Ví dụ: Nếu jump1 là nhảy lên → xuống, thì:
+
+normal: sau khi xuống, nó “teleport” về vị trí ban đầu và nhảy tiếp.
+
+alternate: sau khi xuống, nó chạy ngược lại quãng đường để lên lại.
+
+
+2. animation-fill-mode
+
+- Thuộc tính này quyết định animation giữ trạng thái nào trước khi bắt đầu và sau khi kết thúc.
+
++ none (mặc định): Khi chưa bắt đầu → phần tử dùng CSS ban đầu; khi kết thúc → trở về trạng thái CSS ban đầu
+
++ forwards: Sau khi kết thúc → giữ nguyên trạng thái ở 100% (frame cuối).
+
++ backwards: Khi chưa bắt đầu → hiển thị trạng thái ở 0% (frame đầu).
+
++ both: Kết hợp forwards + backwards:
+
+    .Trước khi bắt đầu → giữ frame đầu.
+
+    .Sau khi kết thúc → giữ frame cuối.
+
