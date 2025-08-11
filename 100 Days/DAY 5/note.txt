@@ -1,0 +1,181 @@
+<div class="frame">
+  <div class="card">
+    <div class="header">
+      <span class="title big">Weekly report</span>
+      <span class="date small">01. Feb - 07. Feb</span>
+      <span class="type small">REVENUE</span>
+      <span class="value big">$3621.79</span>
+    </div>
+
+    <div class="clearfix"></div>
+
+    <div class="parameter">
+      <span class="red">Views</span>
+      <span class="blue">Purchases</span>
+    </div>
+
+    <div class="statistic">
+      <div class="line-1"></div>
+      <div class="line-2"></div>
+      <div class="line-3"></div>
+
+      <div class="data red">
+        <svg>
+          <polyline points="9,46 50,12 90,23 130,11 171,38 211,48 251,19"></polyline>
+        </svg>
+        <div class="points">
+          <div class="point-1"><div class="tooltip">458</div></div>
+          <div class="point-2"><div class="tooltip">812</div></div>
+          <div class="point-3"><div class="tooltip">746</div></div>
+          <div class="point-4"><div class="tooltip">877</div></div>
+          <div class="point-5"><div class="tooltip">517</div></div>
+          <div class="point-6"><div class="tooltip">434</div></div>
+          <div class="point-7"><div class="tooltip">458</div></div>
+        </div>
+      </div>
+
+      <div class="data blue">
+        <svg>
+          <polyline points="9,61 50,50 90,65 130,55 171,61 211,74 251,64"></polyline>
+        </svg>
+        <div class="points">
+          <div class="point-1"><div class="tooltip">26</div></div>
+          <div class="point-2"><div class="tooltip">41</div></div>
+          <div class="point-3"><div class="tooltip">22</div></div>
+          <div class="point-4"><div class="tooltip">36</div></div>
+          <div class="point-5"><div class="tooltip">25</div></div>
+          <div class="point-6"><div class="tooltip">13</div></div>
+          <div class="point-7"><div class="tooltip">20</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="days">
+      <span class="day">Mon</span>
+      <span class="day">Tue</span>
+      <span class="day">Wed</span>
+      <span class="day">Thu</span>
+      <span class="day">Fri</span>
+      <span class="day">Sat</span>
+      <span class="day">Sun</span>
+    </div>
+    
+  </div>
+</div>
+
+
+============================================================
+<div class="container">
+      <div class="panel">
+        <div class="panel-top">
+          <div class="panelTop-left">
+            <div class="report-title">WEEKLY REPORT</div>
+            <div class="report-time">01.Feb - 07.Feb</div>
+          </div>
+
+          <div class="panelTop-right">
+            <div class="revenue-text">Revenue</div>
+            <div class="revenue-number">$3621.79</div>
+          </div>
+        </div>
+
+        <div class="panel-bottom">
+          <div class="legend-wrapper">
+            <div class="legend-item">
+              <div class="legend-color legend-red"></div>
+              <div class="legend-text">Views</div>
+            </div>
+            <div class="legend-item">
+              <div class="legend-color legend-blue"></div>
+              <div class="legend-text">Purchases</div>
+            </div>
+          </div>
+
+          <svg class="line" width="280" height="260">
+            <!-- Grid lines -->
+            <line
+              x1="20"
+              y1="30"
+              x2="280"
+              y2="30"
+              stroke="#e0e0e0"
+              stroke-width="1"
+            />
+            <line
+              x1="20"
+              y1="70"
+              x2="280"
+              y2="70"
+              stroke="#e0e0e0"
+              stroke-width="1"
+            />
+            <line
+              x1="20"
+              y1="110"
+              x2="280"
+              y2="110"
+              stroke="#e0e0e0"
+              stroke-width="1"
+            />
+
+            <!-- Đường biểu đồ Views -->
+            <polyline
+              class="redLine"
+              points="20 86, 60 55, 100 65, 140 53, 180 75, 220 86, 260 57"
+              style="fill: none; stroke: #fa7373; stroke-width: 2"
+            ></polyline>
+
+            <polyline
+              class="redLine"
+              points="20 102, 60 89, 100 97, 140 89, 185 95, 220 105, 270 100"
+              style="fill: none; stroke: #7ba2ff; stroke-width: 2"
+            ></polyline>
+          </svg>
+
+          <div class="days">
+            <span>MON</span>
+            <span>TUE</span>
+            <span>WED</span>
+            <span>THU</span>
+            <span>FRI</span>
+            <span>SAT</span>
+            <span>SUN</span>
+          </div>
+
+          <div class="redPoints">
+            <div class="redBallon red1"><span class="redText">458</span></div>
+            <div class="redBallon red2"><span class="redText">812</span></div>
+            <div class="redBallon red3"><span class="redText">746</span></div>
+            <div class="redBallon red4"><span class="redText">877</span></div>
+            <div class="redBallon red5"><span class="redText">517</span></div>
+            <div class="redBallon red6"><span class="redText">434</span></div>
+            <div class="redBallon red7"><span class="redText">803</span></div>
+          </div>
+
+          <div class="bluePoints">
+            <div class="blueBallon blue1">
+              <span class="blueText">26</span>
+            </div>
+            <div class="blueBallon blue2">
+              <span class="blueText">41</span>
+            </div>
+            <div class="blueBallon blue3">
+              <span class="blueText">22</span>
+            </div>
+            <div class="blueBallon blue4">
+              <span class="blueText">36</span>
+            </div>
+            <div class="blueBallon blue5">
+              <span class="blueText">25</span>
+            </div>
+            <div class="blueBallon blue6">
+              <span class="blueText">13</span>
+            </div>
+            <div class="blueBallon blue7">
+              <span class="blueText">20</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
