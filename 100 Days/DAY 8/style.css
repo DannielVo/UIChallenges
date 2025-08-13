@@ -1,0 +1,459 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: #000;
+  overflow: hidden;
+}
+
+.center {
+  position: absolute;
+}
+
+.ball {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.b2 {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  transform: rotate(8deg);
+}
+
+.b2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  transform-origin: 34px 34px;
+  animation: rotate 3s ease-in-out infinite;
+  animation-delay: 0.4s;
+}
+
+.b3 {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  transform: rotate(192deg);
+}
+
+.b3::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  transform-origin: 31px 31px;
+  animation: rotate 3.2s ease-in-out infinite;
+  animation-delay: 0.6s;
+}
+
+.b4 {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  transform: rotate(170deg);
+}
+
+.b4::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  transform-origin: 28px 28px;
+  animation: rotate 3.3s ease-in-out infinite;
+  animation-delay: 0.8s;
+}
+
+.b5 {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  transform: rotate(93deg);
+}
+
+.b5::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  transform-origin: 25px 25px;
+  animation: rotate 3.5s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.b6 {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  transform: rotate(40deg);
+}
+
+.b6::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  transform-origin: 22px 22px;
+  animation: rotate 3.7s ease-in-out infinite;
+  animation-delay: 1.2s;
+}
+
+.b7 {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  transform: rotate(140deg);
+}
+
+.b7::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  transform-origin: 19px 19px;
+  animation: rotate 3.9s ease-in-out infinite;
+  animation-delay: 1.4s;
+}
+
+.b8 {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  transform: rotate(58deg);
+}
+
+.b8::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  transform-origin: 16px 16px;
+  animation: rotate 4.1s ease-in-out infinite;
+  animation-delay: 1.6s;
+}
+
+/* c */
+.c1 {
+  position: absolute;
+  top: 38px;
+  left: 38px;
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+  border-radius: 50px;
+  transform: rotate(114deg);
+}
+
+.c1::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+  border-radius: 50px;
+  transform-origin: 58px 58px;
+  animation: rotate 3.7s ease-in-out infinite;
+  animation-delay: 0.2s;
+}
+
+.c2 {
+  position: absolute;
+  top: 38px;
+  left: 38px;
+  width: 9px;
+  height: 9px;
+  background-color: #fff;
+  border-radius: 50px;
+  transform: rotate(280deg);
+}
+
+.c2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 9px;
+  height: 9px;
+  background-color: #fff;
+  border-radius: 50px;
+  transform-origin: 56px 56px;
+  animation: rotate 3.9s ease-in-out infinite;
+  animation-delay: 0.2s;
+}
+
+.c3 {
+  position: absolute;
+  top: 38px;
+  left: 38px;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50px;
+  transform: rotate(293deg);
+}
+
+.c3::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50px;
+  transform-origin: 54px 54px;
+  animation: rotate 4.1s ease-in-out infinite;
+  animation-delay: 0.6s;
+}
+
+.c4 {
+  position: absolute;
+  top: 38px;
+  left: 38px;
+  width: 11px;
+  height: 11px;
+  background-color: #fff;
+  border-radius: 50px;
+  transform: rotate(263deg);
+}
+
+.c4::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 11px;
+  height: 11px;
+  background-color: #fff;
+  border-radius: 50px;
+  transform-origin: 52px 52px;
+  animation: rotate 4.3s ease-in-out infinite;
+  animation-delay: 0.8s;
+}
+
+.c5 {
+  position: absolute;
+  top: 38px;
+  left: 38px;
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  border-radius: 50px;
+  transform: rotate(300deg);
+}
+
+.c5::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  border-radius: 50px;
+  transform-origin: 50px 50px;
+  animation: rotate 4.5s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.c6 {
+  position: absolute;
+  top: 38px;
+  left: 38px;
+  width: 13px;
+  height: 13px;
+  background-color: #fff;
+  border-radius: 50px;
+  transform: rotate(138deg);
+}
+
+.c6::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 13px;
+  height: 13px;
+  background-color: #fff;
+  border-radius: 50px;
+  transform-origin: 48px 48px;
+  animation: rotate 4.1s ease-in-out infinite;
+  animation-delay: 0.6s;
+}
+
+.c7 {
+  position: absolute;
+  top: 38px;
+  left: 38px;
+  width: 14px;
+  height: 14px;
+  background-color: #fff;
+  border-radius: 50px;
+  transform: rotate(18deg);
+}
+
+.c7::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 14px;
+  height: 14px;
+  background-color: #fff;
+  border-radius: 50px;
+  transform-origin: 46px 46px;
+  animation: rotate 4.9s ease-in-out infinite;
+  animation-delay: 1.4s;
+}
+
+.c8 {
+  position: absolute;
+  top: 38px;
+  left: 38px;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  border-radius: 50px;
+  transform: rotate(36deg);
+}
+
+.c8::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  border-radius: 50px;
+  transform-origin: 44px 44px;
+  animation: rotate 5.1s ease-in-out infinite;
+  animation-delay: 1.6s;
+}
+
+.c9 {
+  position: absolute;
+  top: 38px;
+  left: 38px;
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border-radius: 50px;
+  transform: rotate(17deg);
+}
+
+.c9::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border-radius: 50px;
+  transform-origin: 42px 42px;
+  animation: rotate 5.2s ease-in-out infinite;
+  animation-delay: 1.8s;
+}
+
+.c10 {
+  position: absolute;
+  top: 38px;
+  left: 38px;
+  width: 18px;
+  height: 18px;
+  background-color: #fff;
+  border-radius: 50px;
+  transform: rotate(36deg);
+}
+
+.c10::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-color: #fff;
+  border-radius: 50px;
+  transform-origin: 40px 40px;
+  animation: rotate 5.5s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg) translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: rotate(360deg) translate3d(0, 0, 0);
+  }
+}
