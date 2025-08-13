@@ -1,0 +1,19 @@
+1. translate3d
+
+translate3d trong CSS cũng giống như translateX và translateY, nhưng nó cho phép dịch chuyển theo cả 3 trục:
+
+X → ngang (trái/phải)
+
+Y → dọc (lên/xuống)
+
+Z → tiến/lùi so với màn hình (tạo hiệu ứng 3D)
+
+VD: 
+
+.search-input {
+  transform: translate3d(15px, 0, 0); /* Dịch sang phải 15px */
+}
+
+.search-input.active {
+  transform: translateX(0); /* Về vtri ban đầu */; => Khi active thì về lại vtri ban đầu
+}

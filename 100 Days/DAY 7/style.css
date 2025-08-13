@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+:root {
+  --container-color: #264057;
+  --header-color: #5f98cd;
+  --blue-light: #b2daff;
+  --menu-bg: #43627d;
+  --menu-hover: #385269;
+  --text-menu: #93b2cd;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: var(--container-color);
+  overflow: hidden;
+}
+
+.card {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 320px;
+  height: 305px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+  z-index: 2;
+}
+
+.card.show-menu {
+  transform: translate3d(150px, 0, 0);
+}
+
+.header {
+  width: 100%;
+  height: 60px;
+  background: var(--header-color);
+}
+
+.menu-icon {
+  position: absolute;
+  width: 30px;
+  height: 15px;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+}
+
+.menu-icon:hover .dash-top,
+.menu-icon:hover .dash-bottom,
+.menu-icon:hover .circle {
+  background: white;
+}
+
+.dash-top {
+  position: absolute;
+  width: 20px;
+  height: 3px;
+  top: 0;
+  left: 0;
+  background: var(--blue-light);
+  border-radius: 3px;
+  transition: all 0.2s ease-in-out;
+}
+
+.dash-bottom {
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  top: auto;
+  bottom: 0;
+  background: var(--blue-light);
+  border-radius: 3px;
+  transition: all 0.2s ease-in-out;
+}
+
+.circle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: -2px;
+  right: 0;
+  background: var(--blue-light);
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+.title {
+  display: block;
+  text-align: center;
+  line-height: 60px;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.search-input {
+  position: absolute;
+  top: 12px;
+  right: 55px;
+  width: 78%;
+  font-size: 13px;
+  color: #666;
+  padding: 8px 10px;
+  border-radius: 20px;
+  border: none;
+  transition: all 0.3s ease-in-out;
+  transform: translate3d(15px, 0, 0); /* Dịch sang phải 15px */
+  opacity: 0;
+  pointer-events: none;
+}
+
+.search-input.active {
+  transform: translateX(0); /* Về vtri ban đầu */
+  opacity: 1;
+  pointer-events: all;
+}
+
+.search-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: var(--blue-light);
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.search-icon:hover {
+  color: white;
+}
+
+.notifications {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.line {
+  position: absolute;
+  top: 0;
+  left: 25px;
+  bottom: 0;
+  width: 3px;
+  background-color: #ebebeb;
+}
+
+.noti-item {
+  position: relative;
+  z-index: 2;
+  margin: 25px 20px 25px 43px;
+  transition: all 0.3s ease-in-out;
+}
+
+.noti-item:nth-child(2),
+.noti-item:nth-child(3),
+.noti-item:nth-child(4) {
+  animation: here 0.5s ease-out forwards;
+}
+
+.noti-item:hover {
+  color: #6a9fd0;
+  cursor: pointer;
+}
+
+.noti-circle {
+  position: absolute;
+  top: 0;
+  left: -20px;
+  width: 11px;
+  height: 11px;
+  background: white;
+  border: 2px solid var(--blue-light);
+  box-shadow: 0 0 0 3px #fff;
+  border-radius: 6px;
+}
+
+.time {
+  display: block;
+  font-size: 11px;
+  line-height: 11px;
+  margin-bottom: 2px;
+}
+
+.noti-item p {
+  font-size: 15px;
+  line-height: 20px;
+  margin-bottom: 0px;
+}
+
+.noti-item p strong {
+  font-weight: 500;
+}
+
+.menu {
+  position: absolute;
+  width: 170px;
+  height: 270px;
+  top: 60px;
+  left: 50px;
+  background-color: var(--menu-bg);
+  border-radius: 3px;
+  transition: all 0.5s ease-in-out;
+  transform: translate3d(
+    20px,
+    0,
+    0
+  ); /* Menu dời sang phải 20px (do 20px trục x) */
+}
+
+.menu.active {
+  box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.2);
+  transform: translate3d(0, 0, 0); /* Về vtri ban đầu */
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.menu li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-menu);
+  margin: 0;
+  padding: 15px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu li:hover {
+  color: white;
+  background: var(--menu-hover);
+}
+
+@keyframes here {
+  from {
+    transform: translate3d(0, 50px, 0);
+    opacity: 0;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
