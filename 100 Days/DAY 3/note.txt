@@ -3,6 +3,11 @@
 - Mặc định là center center (trung tâm phần tử).
 
 /* thường là: <x> <y> [<z>] */
+
+X: vị trí ngang (0% = mép trái, 50% = giữa, 100% = mép phải).
+
+Y: vị trí dọc (0% = mép trên, 50% = giữa, 100% = mép dưới).
+
 transform-origin: 50% 50%;      /* trung tâm */
 transform-origin: left top;     /* góc trên trái */
 transform-origin: 20px 10px;    /* toạ độ tuyệt đối tính từ góc trên trái */
