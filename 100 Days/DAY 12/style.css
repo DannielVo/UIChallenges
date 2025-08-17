@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+:root {
+  --tooltip-bg: #4cb6de;
+  --quote-before: #6ac2e3;
+  --info-bg: #286f8a;
+  --text-color: #f4eced;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.frame {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  color: white;
+  background: var(--tooltip-bg);
+  overflow: hidden;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+}
+
+.quote {
+  position: relative;
+  margin-top: 20px;
+  padding: 0 25px;
+}
+
+.quote::before {
+  content: "„";
+  display: block;
+  z-index: 0;
+  position: absolute;
+  font-size: 250px;
+  line-height: 35px;
+  top: -110px;
+  left: 7px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--quote-before);
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  color: var(--text-color);
+  font-size: 23px;
+  line-height: 35px;
+  margin-bottom: 20px;
+}
+
+.author {
+  font-weight: 300;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  background-color: var(--info-bg);
+  padding: 3px 8px 3px 8px;
+  margin: -10px 0;
+  cursor: pointer;
+}
+
+.tooltip:hover .info,
+.tooltip:focus .info {
+  visibility: visible;
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.info {
+  position: absolute;
+  display: block;
+  width: 300px;
+  background: var(--info-bg);
+  border-radius: 3px;
+  bottom: 50px;
+  left: -85px;
+  font-size: 15px;
+  line-height: 24px;
+  cursor: text;
+  visibility: hidden;
+  opacity: 0;
+  transform: translate3d(0, -20px, 0);
+  transition: all 0.5s ease-out;
+}
+
+.info::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 14px;
+  bottom: -15px;
+  left: 0;
+}
+
+.info::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  bottom: -5px;
+  left: 50%;
+  margin-left: -5px;
+  background-color: var(--info-bg);
+}
+
+.info-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.pronounce {
+  width: 100%;
+  height: 30%;
+  background: #fff;
+  color: var(--info-bg);
+  padding: 5px 8px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.pronounce i {
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.pronounce i:hover {
+  transform: scale(1.2);
+}
+
+.text {
+  padding: 10px;
+}
