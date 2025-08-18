@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+:root {
+  --great-color: #ec6565;
+  --plus-size: 50px;
+  --close-size: 50px;
+  --btn-size: 50px;
+  --header-size: 100px;
+  --dash-h: 3px;
+  --dash-w: 15px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.frame {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+  border-radius: 5px;
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  gap: 5px;
+  padding: 5px;
+}
+
+.profile {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  z-index: 1;
+  /* background-color: aliceblue; */
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.profile:hover .overlay {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.profile:hover .plus {
+  scale: 1;
+  opacity: 1;
+}
+
+.profile img {
+  width: 100%;
+  height: 100%;
+}
+
+.profile .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.profile .plus {
+  width: var(--plus-size);
+  height: var(--plus-size);
+  position: absolute;
+  z-index: 2;
+  top: calc(50% - (var(--plus-size) / 2));
+  left: calc(50% - (var(--plus-size) / 2));
+  border-radius: 50%;
+  scale: 3;
+  opacity: 0;
+  background-color: var(--great-color);
+  transition: scale 400ms ease-in-out, opacity 400ms ease-in-out;
+}
+
+.profile .plus::before,
+.profile .plus::after {
+  content: "";
+  width: var(--dash-w);
+  height: var(--dash-h);
+  position: absolute;
+  top: calc(50% - (var(--dash-h) / 2));
+  left: calc(50% - (var(--dash-w) / 2));
+  border-radius: 30px;
+  background-color: #fff;
+}
+
+.profile .plus::before {
+  rotate: 90deg;
+}
+
+.detail.active {
+  visibility: visible;
+}
+
+.detail.active .close {
+  top: 9px;
+}
+
+.detail.active img.header {
+  top: 0;
+  transition: top 500ms ease-in-out;
+}
+
+.detail.active .image {
+  top: calc(50% - (var(--header-size) / 1.5));
+  transition: top 400ms ease-in-out 400ms;
+}
+
+.detail.active .info {
+  bottom: 0;
+  transition: bottom 400ms ease-in-out;
+}
+
+.detail {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  transition: visibility 750ms ease-in-out;
+}
+
+.detail .close:hover::before,
+.detail .close:hover::after {
+  background-color: var(--great-color);
+}
+
+.detail .close {
+  width: var(--close-size);
+  height: var(--close-size);
+  position: absolute;
+  z-index: 10;
+  top: calc(var(--close-size) * -1);
+  right: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: var(--great-color);
+  transition: background 300ms ease-in-out, top 300ms ease-in-out 300ms;
+}
+
+.detail .close:hover {
+  color: var(--great-color);
+  background: #fff;
+}
+
+.detail .close::before,
+.detail .close::after {
+  content: "";
+  width: var(--dash-w);
+  height: var(--dash-h);
+  position: absolute;
+  top: calc(50% - (var(--dash-h) / 2));
+  left: calc(50% - (var(--dash-w) / 2));
+  border-radius: 30%;
+  background-color: #fff;
+  transition: 300ms ease-in-out;
+}
+
+.detail .close::before {
+  rotate: 45deg;
+}
+
+.detail .close::after {
+  rotate: -45deg;
+}
+
+.detail img.header {
+  width: 100%;
+  height: 190px;
+  position: absolute;
+  z-index: 5;
+  top: -190px;
+  left: 0;
+  transition: top 500ms ease-in-out 450ms;
+}
+
+.detail .image {
+  width: var(--header-size);
+  height: var(--header-size);
+  border-radius: 50%;
+  position: absolute;
+  overflow: hidden;
+  z-index: 9;
+  top: calc(var(--header-size) * -1);
+  left: calc(50% - (var(--header-size) / 2));
+  transition: top 400ms ease-in-out 400ms;
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.detail .image img {
+  width: 100%;
+  height: 100%;
+}
+
+.info {
+  width: 100%;
+  height: 220px;
+  position: absolute;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  z-index: 6;
+  left: 0;
+  bottom: -215px;
+  background-color: var(--great-color);
+}
+
+.info .name {
+  margin-bottom: 25px;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.info .action {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border: 2px solid #fff;
+  background-color: var(--great-color);
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: var(--great-color);
+  background: #fff;
+}
+
+.btn i {
+  font-size: 20px;
+}
