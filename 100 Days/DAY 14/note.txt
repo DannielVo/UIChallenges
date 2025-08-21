@@ -1,0 +1,31 @@
+1. Transform: scale()
+
+- The CSS scale() function is used to scale an element (both width and height).
+
+- Format: scale(sx, sy)
+
+Nếu chỉ truyền một giá trị, ví dụ scale(1.5) thì cả chiều ngang và dọc đều nhân lên 1.5 lần.
+
+2. Các dạng scale()
+
+./ scaleX(sx) → chỉ thay đổi chiều ngang.
+
+./ scaleY(sy) → chỉ thay đổi chiều dọc.
+
+3. Giá trị của scale()
+
+./ 1: Giữ nguyên kích thước
+./ >1 : phóng to
+./ 0-1: thu nhỏ
+./ 0: biến mất (co lại thành đường thẳng).
+./ Giá trị âm → vừa lật vừa scale
+
+4. Một số ví dụ
+
+./ transform: scale(2) = transform: scale(200%) => To gấp đôi cả 2 chiều
+
+./ transform: scale(2, 0.5) = transform: scale(200%, 50%) => Chiều ngang to gấp đôi, chiều dọc to gấp 1/2
+
+./ transform: scaleX(1.5) = transform: scaleX(150%) => To chiều ngang gấp 1.5 lần
+
+./ transform: scaleY(0.8) = transform: scaleY(80%) => To chiều ngang gấp 0.8 lần

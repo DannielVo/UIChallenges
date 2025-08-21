@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Icon -->
+    <link
+      href="https://cdn.boxicons.com/fonts/basic/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Upload</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="center">
+        <div class="header">Drop file to upload</div>
+
+        <div class="upload-container">
+          <div class="upload-field">
+            <input type="file" hidden class="drop" />
+            <span class="file"></span>
+            <i class="bx bx-cloud-upload upload"></i>
+          </div>
+          <button class="upload-btn">Upload file</button>
+        </div>
+
+        <img
+          src="https://100dayscss.com/codepen/syncing.svg"
+          class="loading"
+          alt="syncing"
+        />
+        <img
+          src="https://100dayscss.com/codepen/checkmark.svg"
+          class="done"
+          alt="done"
+        />
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
