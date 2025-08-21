@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+:root {
+  --main-color: #4b4841;
+  --secondary-color: #ffce4e;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.frame {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: var(--main-color);
+  overflow: hidden;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+}
+
+.center {
+  position: absolute;
+  width: 320px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 800px;
+}
+
+.flip {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  perspective: 1000px;
+}
+
+.card {
+  position: absolute;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--secondary-color);
+  border-radius: 4px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.5);
+}
+
+.flip:hover .front {
+  transform: rotateX(90deg);
+  transition: transform 0.4s ease-in;
+}
+
+.flip:hover .back {
+  transform: rotateX(0deg);
+  transition: transform 0.4s ease-out 0.4s;
+}
+
+.back {
+  transform: rotateX(-90deg);
+  transition: transform 0.4s ease-in;
+}
+
+.front {
+  transform: rotateX(0deg);
+  transition: transform 0.4s ease-out 0.4s;
+}
+
+.bicycle {
+  width: 40%;
+  transform-origin: 50% 100%;
+  animation: bicycle 0.3s linear infinite;
+}
+
+.street {
+  position: absolute;
+  width: 50%;
+  height: 3px;
+  overflow: hidden;
+  margin-top: 5rem;
+}
+
+.street-bar {
+  position: absolute;
+  right: -20px;
+  height: 100%;
+  background-color: var(--main-color);
+}
+
+.bar-1 {
+  width: 10%;
+  animation: street 1s linear 0.1s infinite;
+}
+
+.bar-2 {
+  width: 5%;
+  animation: street 0.9s linear 0.4s infinite;
+}
+
+.bar-3 {
+  width: 4%;
+  animation: street 1s linear 0.2s infinite;
+}
+
+.bar-4 {
+  width: 8%;
+  animation: street 1s linear infinite;
+}
+
+.bar-5 {
+  width: 3%;
+  animation: street 1s linear infinite;
+}
+
+.bar-6 {
+  width: 5%;
+  animation: street 1s linear 0.3s infinite;
+}
+
+.bar-7 {
+  width: 14%;
+  animation: street 1s linear 0.6s infinite;
+}
+
+.bar-8 {
+  width: 15%;
+  animation: street 1s linear 0.77s infinite;
+}
+
+/* Sky */
+
+.paper-plane {
+  position: absolute;
+  z-index: 10;
+  animation: plane 1s ease-in-out infinite alternate;
+}
+
+.sky {
+  position: absolute;
+  width: 50%;
+  height: 60%;
+  overflow: hidden;
+  margin-top: 14.5%;
+}
+
+.wind {
+  position: absolute;
+  width: 5%;
+  height: 3px;
+  top: 0;
+  right: -40px;
+  background-color: var(--main-color);
+}
+
+.wind-1 {
+  width: 10%;
+  animation: street 0.8s linear infinite;
+}
+
+.wind-2 {
+  top: 12px;
+  width: 10%;
+  animation: street 0.8s linear 0.2s infinite;
+}
+
+.wind-3 {
+  top: 15px;
+  width: 10%;
+  animation: street 0.8s linear 0.5s infinite;
+}
+
+.wind-4 {
+  top: 25px;
+  width: 10%;
+  animation: street 0.8s linear 0.2s infinite;
+}
+
+.wind-5 {
+  top: 40px;
+  width: 10%;
+  animation: street 0.8s linear 1s infinite;
+}
+
+.wind-6 {
+  top: 55px;
+  width: 10%;
+  animation: street 0.8s linear 1.2s infinite;
+}
+
+.wind-7 {
+  top: 70px;
+  width: 10%;
+  animation: street 0.8s linear 0.3s infinite;
+}
+
+.wind-8 {
+  top: 95px;
+  width: 10%;
+  animation: street 0.8s linear 0.7s infinite;
+}
+
+.wind-9 {
+  top: 100px;
+  width: 10%;
+  animation: street 0.8s linear 0.9s infinite;
+}
+
+/* Animation */
+
+@keyframes bicycle {
+  0% {
+    transform: scaleY(100%);
+  }
+
+  100% {
+    transform: scaleY(102%);
+  }
+}
+
+@keyframes street {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-200px);
+  }
+}
+
+@keyframes plane {
+  0% {
+    transform: translateY(15%);
+  }
+
+  100% {
+    transform: translateY(-15%);
+  }
+}
