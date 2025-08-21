@@ -21,6 +21,7 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 5px;
+  overflow: hidden;
   background: -webkit-linear-gradient(bottom left, #3a92af 0%, #5ca05a 100%);
   background: -moz-linear-gradient(bottom left, #3a92af 0%, #5ca05a 100%);
   background: -o-linear-gradient(bottom left, #3a92af 0%, #5ca05a 100%);
@@ -36,17 +37,31 @@ body {
   flex-direction: column;
   background: white;
   border-radius: 3px;
+  overflow: hidden;
 }
 
 .header {
   width: 100%;
   height: 50px;
-  border-bottom: 2px solid lightgray;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #666;
-  margin-bottom: 10px;
+}
+
+.bar {
+  width: 100%;
+  height: 1px;
+  background-color: #d3d0d0;
+}
+
+.green-bar {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #6ece3b;
+  transform: translateX(-300px);
+  top: 50px;
 }
 
 .upload-container {
@@ -55,6 +70,7 @@ body {
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  cursor: pointer;
 }
 
 .upload-field {
@@ -67,11 +83,13 @@ body {
   border: 1px dashed #666;
   margin-bottom: 30px;
   cursor: pointer;
+  overflow: hidden;
 }
 
 .upload-field i {
   font-size: 70px;
   color: #666;
+  cursor: pointer;
 }
 
 .upload-btn {
@@ -95,4 +113,41 @@ body {
   top: 110px;
   font-size: 70px;
   opacity: 0;
+}
+
+@keyframes green {
+  0% {
+    transform: translateX(-300px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes load {
+  0% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+
+  90% {
+    transform: rotate(365deg);
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: rotate(365deg);
+  }
+}
+
+@keyframes exit {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
