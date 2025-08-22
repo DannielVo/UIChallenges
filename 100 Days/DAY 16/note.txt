@@ -1,0 +1,21 @@
+// Thuộc tính fill
+
+- fill là thuộc tính trong SVG dùng để chỉ định màu bên trong của hình dạng vector.
+
+- fill khác với stroke (stroke là thuộc tính tô viền)
+
+VD: 
+
+<svg width="200" height="200">
+  <!-- Hình tròn có màu xanh lá (fill), viền đỏ (stroke) -->
+  <circle cx="100" cy="100" r="50" fill="green" stroke="red" stroke-width="4" />
+</svg>
+
+
+// Tại sao không dùng background-color?
+
+- background-color chỉ áp dụng cho phần tử HTML khối (như div, p, span, …).
+
+- Nhưng trong trường hợp Day 16, .octagon và .triangle không phải là div thường mà là hình dạng được vẽ bằng SVG.
+
+- SVG không hiểu background-color cho chính hình dạng, mà phải dùng fill để tô màu cho hình.
