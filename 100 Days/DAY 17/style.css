@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+.frame {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.stripes {
+  position: relative;
+  top: -67px;
+  left: -100px;
+  width: 600px;
+  transform: rotate(45deg);
+}
+
+.stripe {
+  background-color: #353535;
+  width: 600px;
+  height: 3px;
+  margin-bottom: 15px;
+}
+
+.center {
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #353535;
+  border-radius: 3px;
+  box-shadow: 8px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.polygon {
+  position: absolute;
+  width: 160px;
+  height: 140px;
+  top: 60px;
+  left: 50px;
+}
+
+.polygon .light {
+  fill: #eee;
+  transition: all 0.5s ease-in-out;
+}
+
+.polygon .middle {
+  fill: #ccc;
+  transition: all 0.5s ease-in-out;
+}
+
+.polygon .dark {
+  fill: #aaa;
+  transition: all 0.5s ease-in-out;
+}
+
+.polygon:hover .light {
+  fill: #aaa;
+}
+
+.polygon:hover .middle {
+  fill: #eee;
+}
+
+.polygon:hover .dark {
+  fill: #ccc;
+}
