@@ -1,0 +1,40 @@
+// box-sizing 
+
+
+1. border-box
+
+- width đã bao gồm luôn content + padding + border.
+
+VD: width: 400px; border-left: 10px;
+
+=> tổng chiều ngang thực tế vẫn 400px, nhưng phần content chỉ còn 390px.
+
+
+2. content-box
+
+- width chỉ tính riêng phần content, không tính border, padding.
+
+VD: width: 400px; border-left: 10px;
+
+=> tổng chiều ngang thực tế = 400 (content) + 10 (border) = 410px.
+
+
+// Trong code Day 19:
+
+Do đã set ở đầu file css là {box-sizing: border-box}
+
+Mà khi select .bg có:
+
+{width: 400px; 
+background-color: #3498db;
+border-left: 400px solid rebeccapurple;
+border-right: 400px solid #1abc9c;}
+
+Lúc đầu .bg ko dùng border-box thì bị tình trạng màu xanh da ời bị ép, chỉ hiển thị màu tím và xanh lục.
+
+Do width ban đầu là 400 mà border 2 bên cũng bằng 400 => 400 - 400 - 400 = -px 
+
+=> Màu xanh da trời bị biến mất hoàn toàn
+
+Sau đó, áp dụng content-box cho .bg thì thành công do width lúc này là 400, đc cộng thêm cả border-left-right
+là 400 + 400 + 400 = 1200px nên 3 slide hiển thị đúng.
