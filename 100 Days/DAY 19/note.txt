@@ -38,3 +38,25 @@ Do width ban đầu là 400 mà border 2 bên cũng bằng 400 => 400 - 400 - 40
 
 Sau đó, áp dụng content-box cho .bg thì thành công do width lúc này là 400, đc cộng thêm cả border-left-right
 là 400 + 400 + 400 = 1200px nên 3 slide hiển thị đúng.
+
+
+// Ký hiệu ~
+
+Trong code CSS day 19, có đoạn:
+
+#check1:checked ~ .bg {
+  transform: translateX(0px);
+}
+
+Vậy tại sao ko viết là:
+
+#check1:checked .bg {
+  transform: translateX(0px);
+}
+
+
+=> Điểm khác biệt chính:
+
+A ~ B (general sibling combinator): chọn phần tử B (ở đây là .bg) nếu nó là anh em cùng cấp và xuất hiện sau phần tử A (#check1:checked).
+
+A B (descendant combinator - dấu cách): chọn phần tử B nếu nó là con cháu nằm bên trong phần tử A.
