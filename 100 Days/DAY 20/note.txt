@@ -1,0 +1,28 @@
+// SVG STROKE 
+
+1. stroke-linecap
+
+- The stroke-linecap attribute defines different types of endings for a line or an open path.
+
+2. stroke-dasharray
+
+- The stroke-dasharray attribute is used to create dashed lines.
+
+- Cú pháp: stroke-dasharray: a b c ...;
+
+Trong đó:
+
+a = chiều dài của đoạn kẻ (nét liền).
+
+b = chiều dài khoảng trống sau đoạn kẻ đó.
+
+c = đoạn tiếp theo,... (nó lặp lại tuần hoàn).
+
+3. stroke-dashoffset
+
+=> Vẽ ngược lại => Tạo hiệu ứng nét vẽ biến mất
+
+- This property then shifts the starting point of that dash pattern along the path. 
+- A positive value moves the pattern forward, while a negative value moves it backward.
+
+Link video giải thích: https://www.youtube.com/watch?v=-Na_WRk3k74
