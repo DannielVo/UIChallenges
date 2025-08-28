@@ -2,11 +2,23 @@
 
 translate3d trong CSS cũng giống như translateX và translateY, nhưng nó cho phép dịch chuyển theo cả 3 trục:
 
-X → ngang (trái/phải)
+- x: dịch chuyển theo trục ngang (trục X).
 
-Y → dọc (lên/xuống)
+x < 0: qua trái.
 
-Z → tiến/lùi so với màn hình (tạo hiệu ứng 3D)
+x > 0: qua phải.
+
+- y: dịch chuyển theo trục dọc (trục Y).
+
+y < 0: đi lên trên.
+
+y > 0: đi xuống dưới.
+
+- z: dịch chuyển theo chiều sâu (trục Z).
+
+z < 0: đi ra xa khỏi màn hình (nhỏ dần).
+
+z > 0: đi tiến lại gần màn hình (lớn dần).
 
 VD: 
 
