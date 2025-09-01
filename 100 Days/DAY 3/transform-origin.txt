@@ -28,6 +28,3 @@ ease-in → cubic-bezier(0.42, 0, 1, 1) (chậm rồi tăng tốc)
 ease-out → cubic-bezier(0, 0, 0.58, 1) (bắt đầu nhanh rồi chậm dần)
 
 ease-in-out → cubic-bezier(0.42, 0, 0.58, 1) (chậm → nhanh → chậm)
-
-
-3. 

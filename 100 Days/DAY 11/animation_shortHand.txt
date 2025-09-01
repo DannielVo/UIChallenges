@@ -1,4 +1,20 @@
-1. animation-direction
+1. animation viết gọn trong CSS
+
+animation: [tên-animation] [thời gian] [hàm-easing] [delay] [số-lần-lặp] [hướng] [fill-mode];
+
+VD: animation: fade-in 0.8s ease-in-out 1s;
+
+fade-in → là tên keyframes animation.
+(Trong code hiện tại bạn chưa định nghĩa @keyframes fade-in, nhưng giả định rằng đâu đó trong CSS có, hoặc để dành cho hiệu ứng “xuất hiện dần”).
+
+0.8s → thời gian chạy animation = 0.8 giây.
+
+ease-in-out → là hàm easing function, giúp hiệu ứng chạy chậm ở đầu, nhanh ở giữa, rồi lại chậm dần ở cuối (tạo cảm giác tự nhiên hơn).
+
+1s → là delay = animation sẽ chờ 1 giây sau khi trang load xong mới bắt đầu chạy.
+
+
+2. animation-direction
 
 - normal: animation chạy từ 0% → 100% rồi quay lại 0% và lặp lại.
 
@@ -19,7 +35,7 @@ normal: sau khi xuống, nó “teleport” về vị trí ban đầu và nhảy
 alternate: sau khi xuống, nó chạy ngược lại quãng đường để lên lại.
 
 
-2. animation-fill-mode
+3. animation-fill-mode
 
 - Thuộc tính này quyết định animation giữ trạng thái nào trước khi bắt đầu và sau khi kết thúc.
 
