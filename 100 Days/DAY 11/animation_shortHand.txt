@@ -1,4 +1,4 @@
-1. animation viết gọn trong CSS
+/// 1. animation viết gọn trong CSS
 
 animation: [tên-animation] [thời gian] [hàm-easing] [delay] [số-lần-lặp] [hướng] [fill-mode];
 
@@ -14,11 +14,14 @@ ease-in-out → là hàm easing function, giúp hiệu ứng chạy chậm ở �
 1s → là delay = animation sẽ chờ 1 giây sau khi trang load xong mới bắt đầu chạy.
 
 
-2. animation-direction
+/// 2. animation-direction
 
 - normal: animation chạy từ 0% → 100% rồi quay lại 0% và lặp lại.
 
 - alternate: animation sẽ đảo chiều mỗi lần lặp:
+
+- reverse: Animation chạy ngược lại: 100% → 0%. Khi lặp lại, nó quay về cuối rồi chạy tiếp từ cuối về đầu.
+
 
 Lượt 1: chạy từ 0% → 100%
 
@@ -35,7 +38,7 @@ normal: sau khi xuống, nó “teleport” về vị trí ban đầu và nhảy
 alternate: sau khi xuống, nó chạy ngược lại quãng đường để lên lại.
 
 
-3. animation-fill-mode
+/// 3. animation-fill-mode
 
 - Thuộc tính này quyết định animation giữ trạng thái nào trước khi bắt đầu và sau khi kết thúc.
 
