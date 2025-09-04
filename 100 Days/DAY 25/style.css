@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.frame {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: uppercase;
+  width: 400px;
+  height: 400px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  color: #3f3f3f;
+}
+
+.map {
+  background-color: #2196f3;
+}
+
+.map svg {
+  fill: #1f8de4;
+}
+
+.active .mark-map {
+  transform: perspective(600px) rotateY(90deg);
+  opacity: 0;
+}
+
+.inactive .mark-map {
+  transition: all 0.5s ease 0.7s;
+}
+
+.mark-map {
+  position: absolute;
+  top: 150px;
+  cursor: pointer;
+  z-index: 50;
+  transition: all 0.5s ease;
+}
+
+.mark-map svg {
+  fill: #ffcc30;
+  animation: back 1s ease-in-out infinite alternate;
+}
+
+.mark-map .shadow {
+  width: 18px;
+  height: 4px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  margin: 5px auto 0 auto;
+  animation: shadow 1s ease-in-out infinite alternate;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.active .card {
+  /* Đoạn này được áp dụng khi cha của card có chứa class active */
+  transform: perspective(600px) rotateY(0deg);
+  opacity: 1;
+}
+
+.card {
+  position: absolute;
+  top: 105px;
+  width: 240px;
+  height: 190px;
+  z-index: 100;
+  opacity: 0;
+  transition: all 0.5s ease 0.4s;
+  transform: perspective(600px) rotateY(90deg);
+  background-color: white;
+  border-radius: 3px;
+}
+
+.card .banner {
+  width: 100%;
+}
+
+.card .card-title {
+  margin: 0;
+  margin-top: 15px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.card .card-street,
+.card .card-direction {
+  font-weight: 400;
+  font-size: 13px;
+  margin: 0;
+  padding: 0;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card-actions .btn {
+  width: 50%;
+  height: 35px;
+  margin-top: 20px;
+  text-align: center;
+  border: none;
+  padding-top: 5px;
+  cursor: pointer;
+  color: #1f8de4;
+  background-color: white;
+  font-size: 11px;
+}
+
+.card-actions .save::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 20px;
+  background-color: #91ccfb;
+  z-index: 5000;
+  left: 50%;
+  bottom: 5px;
+}
+
+@keyframes shadow {
+  0% {
+    transform: scale(0.95);
+  }
+
+  100% {
+    transform: scale(1.35);
+  }
+}
+
+@keyframes back {
+  0% {
+    transform: translate3d(0, 0px, 0);
+  }
+
+  100% {
+    transform: translate3d(0, -7px, 0);
+  }
+}
