@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+:root {
+  --main-color: #497081;
+  --second-color: #d4dce0;
+  --third-color: #c8b4d9;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.frame {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 400px;
+  color: var(--main-color);
+  background: linear-gradient(to top right, #fda231 0%, #fdca31 100%);
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.list-container {
+  position: absolute;
+  width: 250px;
+  height: 280px;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.list-container {
+  position: absolute;
+  width: 250px;
+  height: 280px;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.header {
+  text-align: center;
+  margin: 0 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--second-color);
+}
+
+.head-day {
+  font-size: 19px;
+  font-weight: 500;
+  padding-top: 10px;
+}
+
+.head-date {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0 30px;
+  padding: 4px 0;
+}
+
+li {
+  position: relative;
+  display: block;
+  margin: 24px 0;
+  height: 14px;
+}
+
+.list-text {
+  float: left;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.button {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #497081;
+  float: right;
+  border-radius: 50%;
+  z-index: 5;
+  cursor: pointer;
+  transition: all 0.4s ease-out 0.5s;
+}
+
+.checkmark {
+  position: absolute;
+  top: 2px;
+  right: 0;
+  fill: none;
+  stroke: #c8b4d9;
+  stroke-width: 1.5;
+  stroke-dasharray: 30;
+  stroke-dashoffset: 30;
+  transition: all 0.5s ease-out;
+}
+
+input {
+  display: none;
+}
+
+input:checked ~ .list-text {
+  color: var(--third-color);
+}
+
+input:checked ~ .button {
+  opacity: 0;
+  transition: all 0.4s ease-in;
+  transform: scale(1.5);
+}
+
+input:checked ~ .checkmark {
+  stroke-dashoffset: 0;
+  transition: all 0.5s ease-out 0.4s;
+}
